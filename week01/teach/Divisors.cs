@@ -19,6 +19,21 @@ public static class Divisors {
     private static List<int> FindDivisors(int number) {
         List<int> results = new();
         // TODO problem 1
+        //pseudocode
+        //for each integer in the range from 1 to the specified number
+        //if the specified number is divisible by the number or is different from the original number
+        //add the number to the results list
+        //if not discard it
+
+        //Implementation
+        //For i starting at 1, while i is less than or equal to 3, increment i by 1 each time.
+        for (int i = 1; i <= number; i++)
+        {
+          if (number%i == 0 && i != number)
+            {
+               results.Add(i); 
+            }  
+        }
         return results;
     }
 }
